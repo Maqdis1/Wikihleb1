@@ -1,0 +1,849 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  background-color: #4f565a;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Header NAV */
+.logo,
+.icons,
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  position: relative;
+  justify-content: space-between;
+
+  width: 100%;
+
+  height: min-content;
+  padding: 15px 30px;
+  background-color: rgb(40, 40, 40);
+}
+
+span {
+  font-size: 65px;
+}
+
+.active {
+  background-color: rgba(255, 217, 0, 0.7);
+}
+
+a {
+  font-size: 23px;
+  padding: 4.5px 9px;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+
+.links__a:hover {
+  background-color: rgba(255, 217, 0, 0.7);
+}
+
+.fa-magnifying-glass {
+  position: relative;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#toggeler,
+#lupa2,
+#lupa {
+  display: none;
+}
+
+.lupa {
+  display: none;
+  padding: 4px 8px;
+  border-radius: 10px;
+  color: black;
+  margin-right: 10px;
+}
+.lupa2 {
+  position: absolute;
+  right: 30px;
+  top: -3.5px;
+  width: 95%;
+  margin-left: 30px;
+  display: none;
+  padding: 4px 6px;
+  border-radius: 10px;
+  color: black;
+}
+
+#lupa:checked ~ nav .icons .lupa {
+  display: block;
+}
+#lupa2:checked ~ nav .links label .lupa2 {
+  display: block;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  display: none;
+  width: 25px;
+  height: 25px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+.none {
+  display: none;
+}
+
+.lines {
+  width: 25px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #fff;
+}
+
+ul {
+  list-style: none;
+  text-align: center;
+  padding: 10px;
+  margin: 5px 0;
+}
+
+li {
+  margin: 5px;
+}
+
+/* добавил Maqdis */
+.main__body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin: 50px auto;
+  gap: 40px;
+}
+.bread10,
+.bread12,
+.bread14 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  padding: 20px 30px;
+  border-radius: 15px;
+  background: linear-gradient(to left, #716b6a 20%, white 50%);
+}
+.info1,
+.info3,
+.info5 {
+  height: 90%;
+  padding: 10px 20px;
+  text-align: justify;
+  border-radius: 10px;
+  background-color: #3b4347;
+}
+
+.picture1,
+.picture3,
+.picture5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30px;
+  background-color: white;
+}
+.bread11,
+.bread13,
+.bread15 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  padding: 20px 30px;
+  border-radius: 15px;
+  background: linear-gradient(to right, #716b6a 20%, white 50%);
+}
+.info2,
+.info4,
+.info6 {
+  height: 90%;
+  padding: 10px 20px;
+  text-align: justify;
+  border-radius: 10px;
+  background-color: #3b4347;
+}
+
+.picture2,
+.picture4,
+.picture6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30px;
+  background-color: white;
+}
+
+.h33 {
+  font-size: 22px;
+  text-align: center;
+}
+.p1 {
+  font-size: 13px;
+}
+
+.hlebii{
+  width: 420px;
+  height: 280px;
+}
+/* FOOTER */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+footer {
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(40, 40, 40);
+  padding-bottom: 20px;
+}
+
+.row-footer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  padding: 0px 50px;
+  padding-top: 40px;
+}
+
+.ul-footer {
+  list-style: none;
+}
+
+h4 {
+  font-size: 18px;
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  font-weight: 500;
+  position: relative;
+}
+h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.ul-footer li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.ul-footer li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+.ul-footer li a:hover {
+  color: #ffffff;
+  padding-left: 8px;
+}
+
+.social-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 15px;
+  margin: 0 auto;
+}
+
+.social-links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 7px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 10px;
+  color: #ffffff;
+  transition: all 0.5s ease;
+  background-color: #0077b7;
+}
+
+.fab {
+  font-size: 20px;
+}
+
+.facebook {
+  background: rgb(2, 103, 226);
+  background: linear-gradient(
+    -45deg,
+    rgba(2, 103, 226, 1) 50%,
+    rgba(22, 167, 252, 1) 100%
+  );
+}
+
+.twitter {
+  background: rgb(29, 155, 240);
+  background: linear-gradient(
+    0deg,
+    rgba(29, 155, 240) 0%,
+    rgba(29, 155, 240) 100%
+  );
+}
+.instagram {
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    -45deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+}
+
+/* responsive */
+
+@media (max-width: 922px) {
+  nav {
+    display: grid;
+    grid-template-areas:
+      "logo icons"
+      "links links";
+    z-index: 10;
+  }
+
+  .logo {
+    grid-area: logo;
+  }
+
+  .links {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    text-align: right;
+    grid-area: links;
+  }
+
+  .icons {
+    grid-area: icons;
+  }
+
+  #toggeler:checked ~ nav .links {
+    transform: translateY(0);
+    display: flex;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .lupa {
+    width: 200px;
+  }
+
+  .none2 {
+    display: none;
+  }
+
+  .none {
+    display: block;
+  }
+
+  nav {
+    padding: 11px 26px;
+  }
+
+  .bread-pic {
+    width: 50px;
+    height: 50px;
+  }
+
+  span {
+    font-size: 45px;
+  }
+
+  a {
+    font-size: 20px;
+    padding: 4px 8px;
+  }
+
+  .fa-magnifying-glass {
+    font-size: 18px;
+  }
+
+  /* foooootttteeeer */
+
+  footer {
+    line-height: 1.4;
+    padding-bottom: 17px;
+  }
+
+  .footer-col {
+    padding: 0px 45px;
+    padding-top: 35px;
+  }
+
+  h4 {
+    font-size: 16.5px;
+    width: 80%;
+    margin-bottom: 30px;
+  }
+
+  .social-links {
+    column-gap: 13px;
+  }
+
+  .social-links a {
+    height: 36px;
+    width: 36px;
+    margin: 6px 0;
+    line-height: 36px;
+  }
+
+  .fab {
+    font-size: 17.5px;
+  }
+
+  /* добавил Maqdis */
+  .main__body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 40px auto;
+    gap: 30px;
+  }
+  .bread10,
+  .bread12,
+  .bread14 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 95%;
+    padding: 10px 20px;
+    border-radius: 15px;
+    background: linear-gradient(to top, #716b6a 20%, white 50%);
+  }
+  .bread11,
+  .bread13,
+  .bread15 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    width: 95%;
+    padding: 10px 20px;
+    border-radius: 15px;
+    background: linear-gradient(to top, #716b6a 20%, white 50%);
+  }
+
+  .info1,
+  .info3,
+  .info5 {
+    height: 90%;
+    padding: 5px 10px;
+    text-align: justify;
+    border-radius: 10px;
+    background-color: #3b4347;
+  }
+
+  .info2,
+  .info4,
+  .info6 {
+    height: 90%;
+    padding: 5px 10px;
+    text-align: justify;
+    border-radius: 10px;
+    background-color: #3b4347;
+  }
+
+  .picture1,
+  .picture3,
+  .picture5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0px;
+    background-color: white;
+  }
+
+  .picture2,
+  .picture4,
+  .picture6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0px;
+    background-color: white;
+  }
+
+  .h33 {
+    font-size: 22px;
+    text-align: center;
+  }
+  .p1 {
+    font-size: 13px;
+  }
+
+  .hlebii{
+    width: 360px;
+    height: 240px;
+  }
+}
+
+@media (max-width: 780px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav {
+    padding: 10px 24px;
+  }
+
+  .bread-pic {
+    width: 48px;
+    height: 48px;
+  }
+
+  span {
+    font-size: 43px;
+  }
+
+  /* foooootttteeeer */
+
+  footer {
+    line-height: 1.3;
+    padding-bottom: 16px;
+  }
+
+  .footer-col {
+    padding: 0px 41px;
+    padding-top: 31px;
+  }
+
+  h4 {
+    font-size: 15px;
+    width: 85%;
+    margin-bottom: 30px;
+  }
+
+  .ul-footer li a {
+    font-size: 13px;
+  }
+
+  .social-links {
+    column-gap: 12px;
+  }
+
+  .social-links a {
+    height: 33px;
+    width: 33px;
+    margin: 5.5px 0;
+    line-height: 33px;
+  }
+
+  .fab {
+    font-size: 16px;
+  }
+
+  .hlebii{
+    width: 320px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .burger {
+    width: 20px;
+    height: 20px;
+  }
+
+  .lines {
+    width: 20px;
+    height: 2px;
+    border-radius: 2px;
+  }
+
+  nav {
+    padding: 9px 20px;
+  }
+
+  .bread-pic {
+    width: 42px;
+    height: 42px;
+  }
+
+  span {
+    font-size: 39px;
+  }
+
+  a {
+    font-size: 18px;
+    padding: 4px 8px;
+  }
+
+  .fa-magnifying-glass {
+    font-size: 18px;
+  }
+
+  /* gifs */
+  .gifs {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* foooootttteeeer */
+
+  footer {
+    line-height: 1.2;
+    padding-bottom: 10px;
+  }
+
+  .row-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-col {
+    width: 100%;
+    padding: 0px 30px;
+    padding-top: 30px;
+  }
+
+  h4 {
+    text-align: center;
+    font-size: 15px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .ul-footer li a {
+    font-size: 15px;
+  }
+
+  .social-links {
+    column-gap: 12px;
+  }
+
+  .hlebii{
+    width: 270px;
+    height: 160px;
+  }
+}
+
+@media (max-width: 350px) {
+  nav {
+    padding: 8px 17px;
+  }
+
+  .bread-pic {
+    width: 38px;
+    height: 38px;
+  }
+
+  span {
+    font-size: 35px;
+  }
+
+  a {
+    font-size: 16px;
+    padding: 2px 6px;
+  }
+
+  .fa-magnifying-glass {
+    font-size: 15px;
+  }
+
+  /* foooootttteeeer */
+
+  footer {
+    line-height: 1.1;
+  }
+
+  .row-footer {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .footer-col {
+    width: 100%;
+    padding: 0px 30px;
+    padding-top: 30px;
+  }
+
+  h4 {
+    text-align: center;
+    font-size: 15px;
+    width: 50%;
+    margin-bottom: 17px;
+  }
+
+  .ul-footer li a {
+    font-size: 13px;
+  }
+
+  .social-links {
+    column-gap: 10px;
+  }
+
+  .social-links a {
+    height: 30px;
+    width: 30px;
+    margin: 5.5px 0;
+    line-height: 30px;
+  }
+
+  .fab {
+    font-size: 14px;
+  }
+
+  .hlebii{
+    width: 230px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 280px) {
+  nav {
+    padding: 6px 15px;
+  }
+
+  .bread-pic {
+    width: 36px;
+    height: 36px;
+  }
+
+  span {
+    font-size: 33px;
+  }
+
+  a {
+    font-size: 12px;
+    padding: 2px 5px;
+  }
+
+  .fa-magnifying-glass {
+    font-size: 13px;
+  }
+
+  h1 {
+    font-size: 21px;
+  }
+
+  .name-link {
+    padding: 12px 28px;
+  }
+  /* CARDS */
+
+  .undo {
+    font-size: 14px;
+  }
+
+  .card {
+    width: 230px;
+    height: 290px;
+    margin: 8px;
+  }
+
+  .heading {
+    padding: 5px;
+    font-size: 9px;
+    border: 2px solid #3c3e47;
+  }
+
+  .bread {
+    height: 155px;
+  }
+
+  .description {
+    font-size: 11px;
+    height: 75px;
+  }
+
+  .flip-me {
+    font-size: 10px;
+    padding: 4px 6px;
+  }
+
+  /* back side */
+
+  ul {
+    padding: 7px;
+    margin: 3px 0;
+  }
+
+  li {
+    font-size: 9.5px;
+    margin: 3px;
+  }
+
+  .more-info {
+    bottom: 30px;
+    padding: 7px;
+  }
+
+  .more-info__inner {
+    font-size: 12px;
+  }
+
+  .hlebii{
+    width: 190px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 930px) {
+  .lupa {
+    width: 150px;
+  }
+}
+
+@media (max-width: 574px) {
+  .lupa2 {
+    width: 93%;
+  }
+}
+@media (max-width: 450px) {
+  .lupa2 {
+    width: 90%;
+  }
+}
+@media (max-width: 370px) {
+  .lupa2 {
+    width: 85%;
+  }
+}

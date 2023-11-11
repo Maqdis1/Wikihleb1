@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="contacts.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Викихлеб</title>
+  </head>
+  <body>
+    <!--Nav -->
+    <input type="checkbox" id="toggeler" />
+    <input type="checkbox" id="lupa2" />
+    <input type="checkbox" id="lupa" />
+    <nav>
+      <a href="../index.html">
+        <div class="logo">
+          <img src="../images/bread.png" alt="bread" class="bread-pic" />
+          <span>Викихлеб</span>
+        </div>
+      </a>
+
+      <div class="links">
+        <label for="lupa2" class="none">
+          <input class="lupa2" type="text" placeholder="Search..." />
+          <i class="fa-solid fa-magnifying-glass"> </i>
+        </label>
+
+        <a class="links__a" href="../index.html">Главная</a>
+        <a class="links__a" href="../history/history.html">История </a>
+        <a class="links__a" href="../about-us/about.html">О нас</a>
+        <a class="links__a active" href="#">Контакты</a>
+      </div>
+
+      <div class="icons">
+        <input class="lupa none2" type="text" placeholder="Search..." />
+        <label for="lupa" class="none2">
+          <i class="fa-solid fa-magnifying-glass"> </i>
+        </label>
+
+        <label class="burger" for="toggeler">
+          <div class="lines"></div>
+          <div class="lines"></div>
+          <div class="lines"></div>
+        </label>
+      </div>
+    </nav>
+    <!-- nav End -->
+
+    <!-- ПИСАТЬ ЗДЕСЬ -->
+
+    <div class="about-container">
+      <p class="p1">Свяжитесь с нами</p>
+      <p class="p4">+71 205 9999</p>
+      <p class="p2">+71 206 9999</p>
+      <p class="p2">+71 207 9999</p>
+      
+
+      <p class="p3">Наша почта</p>
+      <p class="p4">info@vikihleb.com</p>
+      <p class="p2">info@vikihleb.ru</p>
+      <p class="p2">info@vikihleb.net</p>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container-footer">
+        <div class="row-footer">
+          <div class="footer-col">
+            <h4>Викихлеб</h4>
+            <ul class="ul-footer">
+              <li><a href="../history/history.html">История</a></li>
+              <li><a href="#">контакты</a></li>
+              <li><a href="../about-us/about.html">о нас</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Партнёры</h4>
+            <ul class="ul-footer">
+              <li><a href="https://ru.wikipedia.org/wiki/">Википедия</a></li>
+              <li>
+                <a href="https://ru.wikimedia.org/wiki/">Викимедия</a>
+              </li>
+              <li>
+                <a href="https://ru.wikipedia.org/wiki/Викисклад">Викисклад</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Изделия</h4>
+            <ul class="ul-footer">
+              <li><a href="../hleb/hleb.html">хлеб</a></li>
+              <li><a href="../biskvit/biskvit.html">бисквик</a></li>
+              <li><a href="../bulochki/bulochki.html">булочки</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Соцсети</h4>
+            <div class="social-links">
+              <a href="#" class="facebook">
+                <i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="twitter"> <i class="fab fa-twitter"></i> </a>
+              <a href="#" class="instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#"> <i class="fa-brands fa-linkedin-in"></i> </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- scripts -->
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
